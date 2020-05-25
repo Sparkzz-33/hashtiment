@@ -1,0 +1,7 @@
+Project Name : Hashtiment  (i.e Hashtag Sentiment)
+
+Author and Developer : Ashutosh Rajput (Github id : Sparkzz-33)
+
+Description : 
+	Release 1.0:
+		* Input Parameters (hashtag, limit, start date, end date), Output (Sentimental analysis chart of the hashtag corresponding to the given parameters)
