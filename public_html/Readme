@@ -5,3 +5,4 @@ Author and Developer : Ashutosh Rajput (Github id : Sparkzz-33)
 Description : 
 	Release 1.0:
 		* Input Parameters (hashtag, limit, start date, end date), Output (Sentimental analysis chart of the hashtag corresponding to the given parameters)
+		Commit (27 May) : Changed UI, added a new home screen, also added a new option for current trends.

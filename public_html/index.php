@@ -11,77 +11,80 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="./js/main.js"></script>
-
-    <script>
-    function loadingCircle() {
-        $("#loader").show();
-        }
-
-    </script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
     <style>
-/* Center the loader */
-	#loader {
-	  position: absolute;
-	  left: 50%;
-	  top: 50%;
-	  z-index: 1;
-	  width: 90px;
-	  height: 90px;
-	  margin: -75px 0 0 -75px;
-	  border: 10px solid #f3f3f3;
-	  border-radius: 50%;
-	  border-top: 10px solid #03a9fc;
-	  -webkit-animation: spin 2s linear infinite;
-	  animation: spin 2s linear infinite;
-	}
+    	
+    	body
+    	{
+    		background-image: url('./includes/bg3.jpg');
+    		background-repeat: no-repeat;
+		    background-attachment: fixed;
+		    background-size: cover;
+		    font-family: 'Didact Gothic', sans-serif;
+    	}
+    	.op_right
+    	{
+    		position: absolute;
+    		right: 5%;
+    		width: 33%;
+    		border: 2px solid white;
+    		top: 35%;
+    		border-radius: 20px;
+    		background-color: rgba(0,0,0,0.2)
+    	}
+    	.butt
+    	{
+    		height: 60px;
+    		width: 80%;
+    		margin-left: 32%
+    		background-color: white;
+    		display:flex;
+    		border: 1px solid white;
+    		margin: 2%;
+    		border-radius: 10px;
 
-	@-webkit-keyframes spin {
-	  0% { -webkit-transform: rotate(0deg); }
-	  100% { -webkit-transform: rotate(360deg); }
-	}
-
-	@keyframes spin {
-	  0% { transform: rotate(0deg); }
-	  100% { transform: rotate(360deg); }
-	}
-
-
-	</style>
+    	}
+    	.butt:hover
+    	{
+    		text-decoration-color: white; 
+    		color: white;
+    		background-color: #03a9fc;
+    	}
+    	.lin:hover
+    	{
+    		color: white;
+    	}
+    	.left_div
+    	{
+    		position: absolute;
+    		left: 2%;
+    		top: 30%;
+    		color: white;
+    	}
+    	.nav_item:hover
+		{
+			color: #03a9fc;
+		}
+    </style>
 </head>
 <body>
 	<?php  //Navigation Bar
 		include_once("./templates/header.php");
 	?>
-	<br><br><br><br>
-	<div class="card mx-auto" style="width: 25rem; height: 30rem">
-	  	<!-- <img src="./images/login.jpg" class="card-img-top mx-auto"> -->
-		 	 <div class="card-body">
-		 	 	<form id="form_hashtag" onsubmit="return false" autocomplete="off">
-				  <div class="form-group">
-				    <label for="hashtag">Enter Hashtag</label>
-				    <input type="text" class="form-control" id="hashtag" name="hashtag">
-				    <small id="h_error" class="form-text text-muted">Enter your hashtag here</small>
-				  </div>
-				  <div class="form-group">
-				  	<label for="limit">Max tweets to be analyzed</label>
-				  	<input type="text" name="limit" id="limit" class="form-control" placeholder="Maximum 1000 tweets can be analyzed">
-				  </div>
-				  <div class="form-row">
-				  	<div class="form-group col-md-6">
-				  		<label>Start Date</label>
-				  		<input type="date" class="form-control" name="start_date">
-				  	</div>
-				  	<div class="form-group col-md-6">
-				  		<label>End Date</label>
-				  		<input type="date" class="form-control" name="end_date">
-				  	</div>
-				  </div>
-				  <button type="submit" onclick="loadingCircle()" class="btn btn-primary" id="btn_submit">  Submit</button>
-				</form>
-				<div id="loader" style="display: none;"></div>
-		 	</div>	
+	<div class="row">
+	<div class="col-lg-7 left_div">
+		<p style="font-size: 80px;">Welcome,</p>
+		<p style="font-size: 60px;">This is an application to semantically analyze tweets</p>
+	</div>
+	<div class="op_right col-lg-5">
+		<div class="butt mx-auto">
+		<a href="hashtag.php" class="mx-auto lin"> <h2><i class="fa fa-hashtag"></i>&nbsp; Analyze Single Hashtag</h2> </a>
 		</div>
-		<br><br>
+		<br>
+		<div class="butt mx-auto">
+		<a href = "#" class="mx-auto lin"><h2><i class="fa fa-globe"></i>&nbsp; Analyze Current Trends</h2></a>
+		</div>
+	</div>
+	</div>
 </body>
 </html>
